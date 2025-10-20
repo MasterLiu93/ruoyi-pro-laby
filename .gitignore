@@ -56,3 +56,7 @@ application-my.yaml
 ######################################################################
 # SQL Files with sensitive data
 sql/*/ruoyi-vue-pro*.sql
+
+######################################################################
+# Configuration files with sensitive data
+laby-server/src/main/resources/application-local.yaml
