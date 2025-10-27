@@ -25,7 +25,7 @@ import static com.laby.module.infra.enums.ErrorCodeConstants.*;
 /**
  * 学生 Service 实现类
  *
- * @author 芋道源码
+ * @author Laby
  */
 @Service
 @Validated

@@ -5,7 +5,7 @@ import com.laby.framework.common.util.json.JsonUtils;
 /**
  * WebSocket 消息的发送器接口
  *
- * @author 芋道源码
+ * @author Laby
  */
 public interface WebSocketMessageSender {
 

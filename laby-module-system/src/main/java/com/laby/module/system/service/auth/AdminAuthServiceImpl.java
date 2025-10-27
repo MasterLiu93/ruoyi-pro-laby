@@ -46,7 +46,7 @@ import static com.laby.module.system.enums.ErrorCodeConstants.*;
 /**
  * Auth Service 实现类
  *
- * @author 芋道源码
+ * @author Laby
  */
 @Service
 @Slf4j

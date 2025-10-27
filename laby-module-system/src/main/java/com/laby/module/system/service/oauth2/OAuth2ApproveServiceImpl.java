@@ -20,7 +20,7 @@ import static com.laby.framework.common.util.collection.CollectionUtils.convertS
 /**
  * OAuth2 批准 Service 实现类
  *
- * @author 芋道源码
+ * @author Laby
  */
 @Service
 @Validated

@@ -13,7 +13,7 @@ import static com.laby.framework.common.util.collection.CollectionUtils.convertL
 /**
  * Array 工具类
  *
- * @author 芋道源码
+ * @author Laby
  */
 public class ArrayUtils {
 

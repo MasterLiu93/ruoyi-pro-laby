@@ -22,7 +22,7 @@ import static com.laby.module.infra.dal.dataobject.logger.ApiAccessLogDO.RESULT_
 /**
  * API 访问日志 Service 实现类
  *
- * @author 芋道源码
+ * @author Laby
  */
 @Slf4j
 @Service

@@ -3,7 +3,7 @@ package com.laby.module.system.service.member;
 /**
  * Member Service 接口
  *
- * @author 芋道源码
+ * @author Laby
  */
 public interface MemberService {
 

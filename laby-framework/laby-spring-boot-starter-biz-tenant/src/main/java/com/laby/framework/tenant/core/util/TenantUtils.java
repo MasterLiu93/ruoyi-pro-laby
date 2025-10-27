@@ -10,7 +10,7 @@ import static com.laby.framework.web.core.util.WebFrameworkUtils.HEADER_TENANT_I
 /**
  * 多租户 Util
  *
- * @author 芋道源码
+ * @author Laby
  */
 public class TenantUtils {
 

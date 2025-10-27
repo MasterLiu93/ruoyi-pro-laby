@@ -16,7 +16,7 @@ import static com.laby.framework.common.util.date.DateUtils.FORMAT_YEAR_MONTH_DA
 @EqualsAndHashCode(callSuper = true)
 public class DictTypePageReqVO extends PageParam {
 
-    @Schema(description = "字典类型名称，模糊匹配", example = "芋道")
+    @Schema(description = "字典类型名称，模糊匹配", example = "Laby")
     private String name;
 
     @Schema(description = "字典类型，模糊匹配", example = "sys_common_sex")

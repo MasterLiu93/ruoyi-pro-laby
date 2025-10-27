@@ -19,7 +19,7 @@ import static com.laby.module.system.dal.redis.RedisKeyConstants.OAUTH2_ACCESS_T
 /**
  * {@link OAuth2AccessTokenDO} 的 RedisDAO
  *
- * @author 芋道源码
+ * @author Laby
  */
 @Repository
 public class OAuth2AccessTokenRedisDAO {

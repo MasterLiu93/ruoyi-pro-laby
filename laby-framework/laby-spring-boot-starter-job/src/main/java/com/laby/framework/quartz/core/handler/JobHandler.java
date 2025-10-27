@@ -3,7 +3,7 @@ package com.laby.framework.quartz.core.handler;
 /**
  * 任务处理器
  *
- * @author 芋道源码
+ * @author Laby
  */
 public interface JobHandler {
 

@@ -22,7 +22,7 @@ import static com.laby.framework.common.util.collection.CollectionUtils.convertS
 /**
  * Admin 用户 API 实现类
  *
- * @author 芋道源码
+ * @author Laby
  */
 @Service
 public class AdminUserApiImpl implements AdminUserApi {

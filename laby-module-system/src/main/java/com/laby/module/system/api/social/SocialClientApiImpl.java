@@ -24,7 +24,7 @@ import static com.laby.framework.common.util.collection.CollectionUtils.convertL
 /**
  * 社交应用的 API 实现类
  *
- * @author 芋道源码
+ * @author Laby
  */
 @Service
 @Validated

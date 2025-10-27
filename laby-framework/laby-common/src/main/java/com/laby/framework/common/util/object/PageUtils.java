@@ -14,7 +14,7 @@ import static java.util.Collections.singletonList;
 /**
  * {@link com.laby.framework.common.pojo.PageParam} 工具类
  *
- * @author 芋道源码
+ * @author Laby
  */
 public class PageUtils {
 

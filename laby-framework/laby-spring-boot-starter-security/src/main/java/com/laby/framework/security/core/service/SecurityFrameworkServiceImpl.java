@@ -14,7 +14,7 @@ import static com.laby.framework.security.core.util.SecurityFrameworkUtils.skipP
 /**
  * 默认的 {@link SecurityFrameworkService} 实现类
  *
- * @author 芋道源码
+ * @author Laby
  */
 @AllArgsConstructor
 public class SecurityFrameworkServiceImpl implements SecurityFrameworkService {

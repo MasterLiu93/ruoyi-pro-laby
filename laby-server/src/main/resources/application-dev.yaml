@@ -47,19 +47,19 @@ spring:
       primary: master
       datasource:
         master:
-          url: jdbc:mysql://127.0.0.1:3306/ruoyi-vue-pro?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true&rewriteBatchedStatements=true # MySQL Connector/J 8.X 连接的示例
+          url: jdbc:mysql://127.0.0.1:3306/laby?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true&rewriteBatchedStatements=true # MySQL Connector/J 8.X 连接的示例
           username: root
           password: root123
         slave: # 模拟从库，可根据自己需要修改 # 模拟从库，可根据自己需要修改
           lazy: true # 开启懒加载，保证启动速度
-          url: jdbc:mysql://127.0.0.1:3306/ruoyi-vue-pro?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true&rewriteBatchedStatements=true # MySQL Connector/J 8.X 连接的示例
+          url: jdbc:mysql://127.0.0.1:3306/laby?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true&rewriteBatchedStatements=true # MySQL Connector/J 8.X 连接的示例
           username: root
           password: root123
 
   # Redis 配置。Redisson 默认的配置足够使用，一般不需要进行调优
   data:
     redis:
-      host: 400-infra.server.iocoder.cn # 地址
+      host: 127.0.0.1 # 地址
       port: 6379 # 端口
       database: 1 # 数据库索引
 #    password: 123456 # 密码，建议生产环境开启
@@ -73,7 +73,7 @@ spring:
     scheduler-name: schedulerName # Scheduler 名字。默认为 schedulerName
     job-store-type: jdbc # Job 存储器类型。默认为 memory 表示内存，可选 jdbc 使用数据库。
     wait-for-jobs-to-complete-on-shutdown: true # 应用关闭时，是否等待定时任务执行完成。默认为 false ，建议设置为 true
-    properties: # 添加 Quartz Scheduler 附加属性，更多可以看 http://www.quartz-scheduler.org/documentation/2.4.0-SNAPSHOT/configuration.html 文档
+    properties: # 添加 Quartz Scheduler 附加属性
       org:
         quartz:
           # Scheduler 相关配置
@@ -82,7 +82,7 @@ spring:
             instanceId: AUTO # 自动生成 instance ID
           # JobStore 相关配置
           jobStore:
-            # JobStore 实现类。可见博客：https://blog.csdn.net/weixin_42458219/article/details/122247162
+            # JobStore 实现类
             class: org.springframework.scheduling.quartz.LocalDataSourceJobStore
             isClustered: true # 是集群模式
             clusterCheckinInterval: 15000 # 集群检查频率，单位：毫秒。默认为 15000，即 15 秒
@@ -146,35 +146,16 @@ logging:
   file:
     name: ${user.home}/logs/${spring.application.name}.log # 日志文件名，全路径
 
---- #################### 微信公众号相关配置 ####################
-wx: # 参见 https://github.com/Wechat-Group/WxJava/blob/develop/spring-boot-starters/wx-java-mp-spring-boot-starter/README.md 文档
-  mp:
-    # 公众号配置(必填)
-    app-id: wx041349c6f39b268b
-    secret: 5abee519483bc9f8cb37ce280e814bd0
-    # 存储配置，解决 AccessToken 的跨节点的共享
-    config-storage:
-      type: RedisTemplate # 采用 RedisTemplate 操作 Redis，会自动从 Spring 中获取
-      key-prefix: wx # Redis Key 的前缀
-      http-client-type: HttpClient # 采用 HttpClient 请求微信公众号平台
-  miniapp: # 小程序配置（必填），参见 https://github.com/Wechat-Group/WxJava/blob/develop/spring-boot-starters/wx-java-miniapp-spring-boot-starter/README.md 文档
-    appid: wx63c280fe3248a3e7
-    secret: 6f270509224a7ae1296bbf1c8cb97aed
-    config-storage:
-      type: RedisTemplate # 采用 RedisTemplate 操作 Redis，会自动从 Spring 中获取
-      key-prefix: wa # Redis Key 的前缀
-      http-client-type: HttpClient # 采用 HttpClient 请求微信公众号平台
+--- #################### Laby相关配置 ####################
 
---- #################### 芋道相关配置 ####################
-
-# 芋道配置项，设置当前项目所有自定义的配置
+# Laby配置项，设置当前项目所有自定义的配置
 laby:
   pay:
-    order-notify-url: http://yunai.natapp1.cc/admin-api/pay/notify/order # 支付渠道的【支付】回调地址
-    refund-notify-url: http://yunai.natapp1.cc/admin-api/pay/notify/refund # 支付渠道的【退款】回调地址
-    transfer-notify-url: https://yunai.natapp1.cc/admin-api/pay/notify/transfer # 支付渠道的【转账】回调地址
+    order-notify-url: http://localhost:48080/admin-api/pay/notify/order # 支付渠道的【支付】回调地址
+    refund-notify-url: http://localhost:48080/admin-api/pay/notify/refund # 支付渠道的【退款】回调地址
+    transfer-notify-url: http://localhost:48080/admin-api/pay/notify/transfer # 支付渠道的【转账】回调地址
   demo: false # 开启演示模式
-  tencent-lbs-key: TVDBZ-TDILD-4ON4B-PFDZA-RNLKH-VVF6E # QQ 地图的密钥 https://lbs.qq.com/service/staticV2/staticGuide/staticDoc
+  tencent-lbs-key: TVDBZ-TDILD-4ON4B-PFDZA-RNLKH-VVF6E # QQ 地图的密钥
 
 justauth:
   enabled: true
@@ -187,16 +168,6 @@ justauth:
       client-id: wwd411c69a39ad2e54
       client-secret: 1wTb7hYxnpT2TUbIeHGXGo7T0odav1ic10mLdyyATOw
       agent-id: 1000004
-      ignore-check-redirect-uri: true
-    # noinspection SpringBootApplicationYaml
-    WECHAT_MINI_PROGRAM: # 微信小程序
-      client-id: ${wx.miniapp.appid}
-      client-secret: ${wx.miniapp.secret}
-      ignore-check-redirect-uri: true
-      ignore-check-state: true # 微信小程序，不会使用到 state，所以不进行校验
-    WECHAT_MP: # 微信公众号
-      client-id: ${wx.mp.app-id}
-      client-secret: ${wx.mp.secret}
       ignore-check-redirect-uri: true
   cache:
     type: REDIS

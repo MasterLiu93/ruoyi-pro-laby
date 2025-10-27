@@ -25,7 +25,7 @@ import static com.laby.module.infra.enums.ErrorCodeConstants.API_ERROR_LOG_PROCE
 /**
  * API 错误日志 Service 实现类
  *
- * @author 芋道源码
+ * @author Laby
  */
 @Service
 @Validated

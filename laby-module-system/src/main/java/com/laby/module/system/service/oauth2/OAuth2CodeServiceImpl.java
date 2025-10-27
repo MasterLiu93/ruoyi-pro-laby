@@ -18,7 +18,7 @@ import static com.laby.module.system.enums.ErrorCodeConstants.OAUTH2_CODE_NOT_EX
 /**
  * OAuth2.0 授权码 Service 实现类
  *
- * @author 芋道源码
+ * @author Laby
  */
 @Service
 @Validated

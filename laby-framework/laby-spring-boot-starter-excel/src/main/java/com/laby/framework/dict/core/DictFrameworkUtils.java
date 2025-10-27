@@ -18,7 +18,7 @@ import static com.laby.framework.common.util.collection.CollectionUtils.convertL
 /**
  * 字典工具类
  *
- * @author 芋道源码
+ * @author Laby
  */
 @Slf4j
 public class DictFrameworkUtils {

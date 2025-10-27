@@ -31,7 +31,7 @@ import static com.laby.module.system.enums.ErrorCodeConstants.SOCIAL_USER_NOT_FO
 /**
  * 社交用户 Service 实现类
  *
- * @author 芋道源码
+ * @author Laby
  */
 @Service
 @Validated

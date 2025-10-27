@@ -5,7 +5,7 @@ import com.laby.framework.common.biz.system.permission.dto.DeptDataPermissionRes
 /**
  * 权限 API 接口
  *
- * @author 芋道源码
+ * @author Laby
  */
 public interface PermissionCommonApi {
 
