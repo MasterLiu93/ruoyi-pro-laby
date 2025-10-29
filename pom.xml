@@ -15,6 +15,7 @@
         <!-- 各种 module 拓展 -->
         <module>laby-module-system</module>
         <module>laby-module-infra</module>
+        <module>laby-module-wms</module>
 <!--        <module>laby-module-member</module>-->
 <!--        <module>laby-module-bpm</module>-->
 <!--        <module>laby-module-report</module>-->

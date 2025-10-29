@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.laby.boot</groupId>
+        <artifactId>laby</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>laby-module-wms</artifactId>
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>
+        WMS 仓库管理系统模块
+        包含：仓库管理、商品管理、库存管理、入库管理、出库管理、拣货管理、盘点管理等
+    </description>
+
+    <dependencies>
+        <!-- 依赖 infra 模块（包含代码生成器等基础功能） -->
+        <dependency>
+            <groupId>com.laby.boot</groupId>
+            <artifactId>laby-module-infra</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
+        <!-- 业务组件 -->
+        <dependency>
+            <groupId>com.laby.boot</groupId>
+            <artifactId>laby-spring-boot-starter-biz-data-permission</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.laby.boot</groupId>
+            <artifactId>laby-spring-boot-starter-biz-tenant</artifactId>
+        </dependency>
+
+        <!-- Web 相关 -->
+        <dependency>
+            <groupId>com.laby.boot</groupId>
+            <artifactId>laby-spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!-- DB 相关 -->
+        <dependency>
+            <groupId>com.laby.boot</groupId>
+            <artifactId>laby-spring-boot-starter-mybatis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.laby.boot</groupId>
+            <artifactId>laby-spring-boot-starter-redis</artifactId>
+        </dependency>
+
+        <!-- Job 定时任务相关（用于库存预警、盘点等定时任务） -->
+        <dependency>
+            <groupId>com.laby.boot</groupId>
+            <artifactId>laby-spring-boot-starter-job</artifactId>
+        </dependency>
+
+        <!-- 消息队列相关（用于异步处理库存流水、预警通知等） -->
+        <dependency>
+            <groupId>com.laby.boot</groupId>
+            <artifactId>laby-spring-boot-starter-mq</artifactId>
+        </dependency>
+
+        <!-- 工具类相关 -->
+        <dependency>
+            <groupId>com.laby.boot</groupId>
+            <artifactId>laby-spring-boot-starter-excel</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>
+

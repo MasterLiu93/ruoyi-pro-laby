@@ -247,5 +247,34 @@ export enum DICT_TYPE {
   IOT_ALERT_RECEIVE_TYPE = 'iot_alert_receive_type', // IoT 告警接收类型
   IOT_OTA_TASK_DEVICE_SCOPE = 'iot_ota_task_device_scope', // IoT OTA任务设备范围
   IOT_OTA_TASK_STATUS = 'iot_ota_task_status', // IoT OTA 任务状态
-  IOT_OTA_TASK_RECORD_STATUS = 'iot_ota_task_record_status' // IoT OTA 记录状态
+  IOT_OTA_TASK_RECORD_STATUS = 'iot_ota_task_record_status', // IoT OTA 记录状态
+
+  // ========== WMS - 仓库管理系统模块  ==========
+  WMS_WAREHOUSE_TYPE = 'wms_warehouse_type', // 仓库类型
+  WMS_WAREHOUSE_AREA_TYPE = 'wms_warehouse_area_type', // 库区类型
+  WMS_WAREHOUSE_LOCATION_TYPE = 'wms_warehouse_location_type', // 库位类型
+  WMS_LOCATION_STATUS = 'wms_location_status', // 库位状态
+  WMS_GOODS_UNIT = 'wms_goods_unit', // 商品单位
+  WMS_INVENTORY_STATUS = 'wms_inventory_status', // 库存状态
+  WMS_INVENTORY_LOG_TYPE = 'wms_inventory_log_type', // 库存日志类型
+  WMS_INBOUND_TYPE = 'wms_inbound_type', // 入库类型
+  WMS_INBOUND_STATUS = 'wms_inbound_status', // 入库状态
+  WMS_OUTBOUND_TYPE = 'wms_outbound_type', // 出库类型
+  WMS_OUTBOUND_STATUS = 'wms_outbound_status', // 出库状态
+  WMS_PICKING_METHOD = 'wms_picking_method', // 拣货方式
+  WMS_WAVE_TYPE = 'wms_wave_type', // 拣货波次类型
+  WMS_WAVE_STATUS = 'wms_wave_status', // 拣货波次状态
+  WMS_PICKING_TASK_STATUS = 'wms_picking_task_status', // 拣货任务状态
+  WMS_PICKING_EXCEPTION_TYPE = 'wms_picking_exception_type', // 拣货异常类型
+  WMS_STOCK_TAKING_TYPE = 'wms_stock_taking_type', // 盘点类型
+  WMS_STOCK_TAKING_SCOPE_TYPE = 'wms_stock_taking_scope_type', // 盘点范围类型
+  WMS_STOCK_TAKING_PLAN_STATUS = 'wms_stock_taking_plan_status', // 盘点计划状态
+  WMS_STOCK_TAKING_STATUS = 'wms_stock_taking_status', // 盘点状态
+  WMS_STOCK_MOVE_STATUS = 'wms_stock_move_status', // 移库状态
+  WMS_STOCK_MOVE_TYPE = 'wms_stock_move_type', // 移库类型
+  WMS_SUPPLIER_TYPE = 'wms_supplier_type', // 供应商类型
+  WMS_SUPPLIER_CREDIT_LEVEL = 'wms_supplier_credit_level', // 供应商信用等级
+  WMS_CUSTOMER_TYPE = 'wms_customer_type', // 客户类型
+  WMS_CUSTOMER_LEVEL = 'wms_customer_level', // 客户等级
+  WMS_CARRIER_TYPE = 'wms_carrier_type' // 承运商类型
 }
