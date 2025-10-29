@@ -35,6 +35,10 @@ dist/
 nbdist/
 .nb-gradle/
 
+### Cursor IDE ###
+.cursor/
+.vscode/
+
 ######################################################################
 # Others
 *.log
