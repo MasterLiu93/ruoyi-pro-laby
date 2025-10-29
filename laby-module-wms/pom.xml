@@ -38,6 +38,10 @@
         <!-- Web 相关 -->
         <dependency>
             <groupId>com.laby.boot</groupId>
+            <artifactId>laby-spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.laby.boot</groupId>
             <artifactId>laby-spring-boot-starter-security</artifactId>
         </dependency>
         <dependency>

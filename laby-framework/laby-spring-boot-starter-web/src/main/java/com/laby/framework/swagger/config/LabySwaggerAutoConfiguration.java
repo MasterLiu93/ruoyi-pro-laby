@@ -47,7 +47,6 @@ import static com.laby.framework.web.core.util.WebFrameworkUtils.HEADER_TENANT_I
 @ConditionalOnClass({OpenAPI.class})
 @EnableConfigurationProperties(SwaggerProperties.class)
 @ConditionalOnProperty(prefix = "springdoc.api-docs", name = "enabled", havingValue = "true", matchIfMissing = true) // 设置为 false 时，禁用
-@Import(Knife4jOpenApiCustomizer.class)
 public class LabySwaggerAutoConfiguration {
 
     // ========== 全局 OpenAPI 配置 ==========
